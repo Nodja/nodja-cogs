@@ -185,4 +185,4 @@ class NewReactPoll():
 def setup(bot):
     n = ReactPoll(bot)
     bot.add_cog(n)
-bot.add_listener(n.reaction_listener, "on_reaction_add")
+    bot.add_listener(n.reaction_listener, "on_reaction_add")
