@@ -159,7 +159,7 @@ class NewReactPoll():
 
     async def endPoll(self, expired=False):
         self.valid = False
-        if not expired and poll.wait_task is not None:
+        if not expired and self.wait_task is not None:
             self.wait_task.cancel()
         # Need a fresh message object
         self.message = await self.client.get_message(self.channel, self.message.id)
